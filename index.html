@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>大学受験コースのご案内</title>
+<meta name="description" content="木の葉アカデミー 大学受験コース。入塾したら毎日どうなるのかを、実際の画面と添削PDFでお見せします。">
+<meta property="og:title" content="木の葉アカデミー 大学受験コースのご案内">
+<meta property="og:description" content="入塾したら、毎日こうなります。実際のアプリの画面と、AI×塾長の添削PDFの実物。">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5f1; --paper:#ffffff; --ink:#1d2421; --sub:#5b6560; --line:#e3e1d9;
+  --green:#1f6b4a; --green2:#2e8b5f; --mint:#e6f2ec; --accent:#d9482b; --accent2:#fdece7;
+  --blue:#2457a6; --sky:#e8eff9; --gold:#b7791f; --cream:#fff8e6;
+  --shadow:0 10px 30px rgba(20,40,30,.10), 0 2px 6px rgba(20,40,30,.06);
+  --r:18px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121614; --paper:#1b211e; --ink:#eef2ef; --sub:#a7b2ac; --line:#2c3531;
+    --green:#5cc391; --green2:#7bd4a7; --mint:#1d2b25; --accent:#ff7a5c; --accent2:#2e1f1b;
+    --blue:#8fb4ee; --sky:#1b2433; --gold:#e3b25a; --cream:#2a251a;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121614; --paper:#1b211e; --ink:#eef2ef; --sub:#a7b2ac; --line:#2c3531;
+  --green:#5cc391; --green2:#7bd4a7; --mint:#1d2b25; --accent:#ff7a5c; --accent2:#2e1f1b;
+  --blue:#8fb4ee; --sky:#1b2433; --gold:#e3b25a; --cream:#2a251a;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Sans",sans-serif;line-height:1.85;font-size:16px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+b,strong{font-weight:700}
+.mark{background:linear-gradient(transparent 62%, rgba(255,200,60,.55) 62%);padding:0 2px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mark{background:linear-gradient(transparent 62%, rgba(227,178,90,.35) 62%)}}
+
+/* ---------- ヒーロー ---------- */
+.hero{background:radial-gradient(1200px 500px at 85% -10%, #2e8b5f 0%, transparent 60%), linear-gradient(160deg,#123d2b 0%,#1f6b4a 55%,#2b7a57 100%);color:#fff;padding:28px 0 56px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;bottom:-80px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.06)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px;opacity:.95}
+.brand img{width:32px;height:32px;border-radius:8px;background:#fff}
+.hero h1{font-size:clamp(30px,6.4vw,56px);line-height:1.3;margin:38px 0 14px;font-weight:900;letter-spacing:.02em}
+.hero h1 small{display:block;font-size:clamp(14px,2.6vw,18px);font-weight:500;opacity:.85;letter-spacing:.08em;margin-bottom:10px}
+.hero p.lead{font-size:clamp(15px,2.4vw,18px);max-width:680px;opacity:.95;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px;position:relative;z-index:1}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:14px 14px 12px}
+.stat .n{font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.1}
+.stat .n small{font-size:.5em;font-weight:700;margin-left:2px}
+.stat .t{font-size:12.5px;opacity:.9;margin-top:6px;line-height:1.5}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- 目次 ---------- */
+.toc{margin:-28px auto 0;position:relative;z-index:2}
+.toc .box{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 18px 10px}
+.toc h2{font-size:14px;color:var(--sub);margin:0 0 8px;font-weight:700;letter-spacing:.1em}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px 16px;counter-reset:t}
+.toc li{counter-increment:t}
+.toc a{display:flex;gap:10px;align-items:baseline;text-decoration:none;color:var(--ink);padding:6px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.toc a:before{content:counter(t,decimal-leading-zero);font-weight:900;color:var(--green);font-size:13px}
+.toc a .new{font-size:11px;background:var(--accent);color:#fff;border-radius:4px;padding:0 5px;margin-left:4px}
+@media (max-width:820px){.toc ol{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.toc ol{grid-template-columns:1fr}}
+
+/* ---------- セクション ---------- */
+section{padding:72px 0 0}
+.kicker{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--green);background:var(--mint);border-radius:999px;padding:3px 12px;margin-bottom:12px}
+h2.h{font-size:clamp(23px,4.2vw,34px);line-height:1.45;margin:0 0 14px;font-weight:900}
+.intro{color:var(--sub);max-width:760px;margin:0 0 24px}
+h3{font-size:19px;margin:30px 0 8px;line-height:1.5}
+.card{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+
+/* 画面写真 */
+figure{margin:0}
+.shot{background:var(--paper);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;cursor:zoom-in;position:relative}
+.shot img{width:100%;height:auto}
+.shot:after{content:"⤢ 拡大";position:absolute;right:10px;top:10px;background:rgba(0,0,0,.55);color:#fff;font-size:11px;padding:2px 8px;border-radius:999px}
+figcaption{font-size:13px;color:var(--sub);margin-top:8px;line-height:1.6}
+.pt{list-style:none;padding:0;margin:12px 0 0}
+.pt li{position:relative;padding:0 0 0 26px;margin:0 0 10px}
+.pt li:before{content:"";position:absolute;left:4px;top:.62em;width:12px;height:12px;border-radius:50%;background:var(--green2);box-shadow:0 0 0 4px var(--mint)}
+
+/* 吹き出し（塾長） */
+.say{display:flex;gap:12px;align-items:flex-start;margin:22px 0}
+.say .av{flex:0 0 46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#2e8b5f,#1f6b4a);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;line-height:1.1;text-align:center}
+.say .bub{background:var(--paper);border-radius:4px 16px 16px 16px;padding:12px 16px;box-shadow:var(--shadow);font-size:15px}
+.say .who{font-size:12px;color:var(--sub);font-weight:700;display:block;margin-bottom:2px}
+
+/* ---------- 1週間 ---------- */
+.week{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:8px}
+.wk{background:var(--paper);border-radius:14px;box-shadow:var(--shadow);padding:14px 12px;position:relative}
+.wk .when{font-size:12px;font-weight:900;color:var(--green);letter-spacing:.06em}
+.wk .ico{font-size:24px;margin:4px 0}
+.wk .what{font-size:13.5px;line-height:1.6}
+.wk.hl{background:var(--green);color:#fff}
+.wk.hl .when{color:#cfe9db}
+@media (max-width:900px){.week{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.week{grid-template-columns:1fr 1fr}}
+
+/* ---------- スマホの通知の見本 ---------- */
+.phone{width:min(330px,100%);margin:0 auto;border-radius:44px;background:#0d0f12;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.screen{border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#5f8fb8 0%,#a4b9cf 45%,#d8c7b6 100%);min-height:540px;padding:16px 10px 20px;position:relative}
+.island{width:96px;height:26px;border-radius:20px;background:#000;margin:0 auto 10px}
+.clock{text-align:center;color:#fff;font-weight:300;font-size:64px;line-height:1;text-shadow:0 2px 10px rgba(0,0,0,.15)}
+.date{text-align:center;color:#fff;font-size:14px;margin:6px 0 16px;opacity:.95}
+.nt{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:18px;padding:10px 12px;margin:0 0 8px;color:#111;font-size:12.5px;line-height:1.55}
+.nt .top{display:flex;align-items:center;gap:6px;font-size:11px;color:#555;margin-bottom:2px}
+.nt .top img{width:18px;height:18px;border-radius:5px}
+.nt .top span{margin-left:auto}
+.nt .tt{font-weight:700;font-size:13px}
+.nt .bd{white-space:pre-line}
+.phones{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.phones .lab{text-align:center;font-weight:700;margin:14px 0 0}
+.phones .lab small{display:block;font-weight:400;color:var(--sub);font-size:12.5px}
+@media (max-width:760px){.phones{grid-template-columns:1fr}}
+
+/* ---------- 添削PDF ---------- */
+#pdf{background:linear-gradient(180deg,var(--bg) 0, var(--bg) 60px, #10241b 60px, #10241b 100%);color:#eef4f0;padding-bottom:72px}
+#pdf .intro{color:#c8d8cf}
+#pdf .kicker{background:#d9482b;color:#fff}
+#pdf h2.h{color:#fff}
+#pdf .pdfhead{padding-top:60px}
+.pdfnums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0 34px}
+.pdfnums div{border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;background:rgba(255,255,255,.04)}
+.pdfnums b{display:block;font-size:28px;font-weight:900;color:#ffcf6b;line-height:1.1}
+.pdfnums span{font-size:12.5px;color:#c8d8cf}
+@media (max-width:720px){.pdfnums{grid-template-columns:1fr 1fr}}
+.pdfrow{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;align-items:center;margin:0 0 54px}
+.pdfrow.rev{grid-template-columns:1fr 1.35fr}
+.pdfrow.rev .pimg{order:2}
+@media (max-width:860px){.pdfrow,.pdfrow.rev{grid-template-columns:1fr}.pdfrow.rev .pimg{order:0}}
+.pimg .shot{border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.ptext .step{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.12em;color:#10241b;background:#ffcf6b;border-radius:6px;padding:1px 10px}
+.ptext h3{color:#fff;font-size:22px;margin:10px 0 10px}
+.ptext p{color:#d9e6de;margin:0 0 10px}
+.legend{list-style:none;padding:0;margin:14px 0 0}
+.legend li{display:flex;gap:10px;margin:0 0 10px;font-size:14.5px;color:#e6efe9;line-height:1.6}
+.legend .k{flex:0 0 auto;font-size:11.5px;font-weight:900;border-radius:6px;padding:2px 8px;height:fit-content;margin-top:2px}
+.k.red{background:#ffe3dc;color:#b42318}.k.grn{background:#dff3e8;color:#1f6b4a}.k.dash{background:#fff;color:#b42318;border:1px dashed #b42318}.k.yel{background:#fff1c9;color:#7a5200}.k.blu{background:#e1ecfb;color:#1f4b8f}
+.note-blur{font-size:12px;color:#9fb5a8;margin-top:8px}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.vs .c{border-radius:14px;padding:16px}
+.vs .c h4{margin:0 0 8px;font-size:15px}
+.vs .c ul{margin:0;padding-left:1.1em;font-size:14px;line-height:1.75}
+.vs .bad{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);color:#c8d8cf}
+.vs .good{background:#fff;color:#1d2421}
+.vs .good h4{color:#1f6b4a}
+@media (max-width:720px){.vs{grid-template-columns:1fr}}
+
+/* ---------- 流れ（1年） ---------- */
+.road{position:relative;margin:10px 0 0;padding:0 0 0 30px}
+.road:before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(var(--green2),var(--gold),var(--accent))}
+.road .st{position:relative;margin:0 0 18px}
+.road .st:before{content:"";position:absolute;left:-26px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:3px solid var(--green2)}
+.road .st .tm{font-size:12.5px;font-weight:900;color:var(--green);letter-spacing:.05em}
+.road .st .bx{background:var(--paper);border-radius:14px;box-shadow:var(--shadow);padding:12px 16px}
+.road .st .bx b{display:block;font-size:16px}
+.road .st .bx span{font-size:14px;color:var(--sub)}
+
+/* ---------- 表 ---------- */
+table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-size:14.5px}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--mint);font-size:13px;color:var(--green)}
+td.price{font-size:24px;font-weight:900;white-space:nowrap;color:var(--ink)}
+td.price small{font-size:12px;font-weight:500;color:var(--sub)}
+.tbl{overflow-x:auto}
+.free{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.free div{background:var(--paper);border-radius:14px;padding:14px;text-align:center;box-shadow:var(--shadow)}
+.free b{display:block;font-size:24px;color:var(--accent);font-weight:900}
+.free span{font-size:13px;color:var(--sub)}
+@media (max-width:620px){.free{grid-template-columns:1fr}}
+
+/* 比較バー */
+.cmp{margin-top:16px}
+.cmp .row{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:center;margin:0 0 10px;font-size:13.5px}
+.cmp .bar{height:26px;border-radius:7px;display:flex;align-items:center;padding:0 10px;color:#fff;font-weight:700;font-size:12.5px;white-space:nowrap}
+@media (max-width:520px){.cmp .row{grid-template-columns:1fr}}
+
+/* 合格実績 */
+.pass{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pass div{background:var(--paper);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.pass b{display:block;font-size:16px}
+.pass span{font-size:12.5px;color:var(--sub)}
+@media (max-width:720px){.pass{grid-template-columns:1fr 1fr}}
+
+/* FAQ */
+details{background:var(--paper);border-radius:14px;box-shadow:var(--shadow);margin:0 0 10px;padding:0 18px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"Q";color:var(--green);font-weight:900}
+details[open] summary{border-bottom:1px dashed var(--line)}
+details p{margin:12px 0 16px;color:var(--sub);font-size:15px}
+
+/* CTA */
+.cta{margin:72px 0 0;background:linear-gradient(135deg,#1f6b4a,#123d2b);color:#fff;border-radius:24px;padding:34px 22px;text-align:center}
+.cta h2{margin:0 0 8px;font-size:clamp(22px,4vw,30px)}
+.cta p{opacity:.92;margin:0 0 20px}
+.steps{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 24px}
+.steps div{background:rgba(255,255,255,.12);border-radius:12px;padding:10px 14px;font-size:13.5px;text-align:left}
+.steps b{display:block;font-size:11px;letter-spacing:.12em;color:#ffcf6b}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#06c755;color:#fff;font-weight:900;text-decoration:none;border-radius:999px;padding:15px 28px;font-size:17px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.btn:hover{filter:brightness(1.05)}
+footer{color:var(--sub);font-size:12px;padding:30px 0 50px;line-height:1.8}
+
+/* 拡大 */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;z-index:50;overflow:auto;padding:16px}
+.lb.on{display:block}
+.lb img{max-width:min(1400px,100%);margin:40px auto;border-radius:6px}
+.lb .x{position:fixed;right:14px;top:10px;color:#fff;font-size:30px;background:none;border:0;cursor:pointer;line-height:1}
+.lb .cap{color:#ddd;text-align:center;font-size:13px;max-width:900px;margin:-24px auto 30px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><img src="img/icon.png" alt="">木の葉アカデミー　大学受験コース</div>
+    <h1><small>高校生・保護者の方へ　入塾をご検討中の方だけにお送りしているページです</small>入塾したら、<br>毎日こうなります。</h1>
+    <p class="lead">「合格ロードマップ」で受験までの1年を逆算し、それを「今週」「今日やること」に分けて毎朝スマホに届けます。答案は、まちがえた問題の横に<span class="mark" style="color:#fff;background:linear-gradient(transparent 62%, rgba(255,207,107,.45) 62%)">「あなたの答え → 正解 → 考え方」</span>を書き込んだPDFにしてお返しします。このページの画面と添削PDFは、すべて実際に使っているものです。</p>
+    <div class="chips"><span class="chip">高1〜高3・既卒</span><span class="chip">数学・英語・物理・化学を指導</span><span class="chip">全教科の学習計画</span><span class="chip">鈴鹿の教室／オンライン（同じ料金）</span></div>
+    <div class="stats">
+      <div class="stat"><div class="n">毎朝7時</div><div class="t">本人に「今日やること」、保護者に「昨日のようす」が届く</div></div>
+      <div class="stat"><div class="n">900<small>セット+</small></div><div class="t">高校生向けオリジナル単元テスト（すべて塾で作成）</div></div>
+      <div class="stat"><div class="n">52<small>ページ</small></div><div class="t">64問の確認テスト1回に返した解説つき答案PDF（実例）</div></div>
+      <div class="stat"><div class="n">0<small>円</small></div><div class="t">入会金・季節講習・アプリ利用料</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="wrap toc" aria-label="もくじ">
+  <div class="box">
+    <h2>このページでわかること</h2>
+    <ol>
+      <li><a href="#week">1週間の流れ</a></li>
+      <li><a href="#map">合格ロードマップ</a></li>
+      <li><a href="#today">「今週」「今日」の画面</a></li>
+      <li><a href="#test">単元テスト・つまずきカード</a></li>
+      <li><a href="#pdf">解説つき答案PDF<span class="new">実物</span></a></li>
+      <li><a href="#kakomon">過去問の分析</a></li>
+      <li><a href="#parent">保護者の方へ</a></li>
+      <li><a href="#year">入塾から受験までの1年</a></li>
+      <li><a href="#price">料金・合格実績</a></li>
+    </ol>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- 1週間 -->
+<section id="week">
+  <span class="kicker">01　1週間の流れ</span>
+  <h2 class="h">週1回の授業と、それ以外の6日間を<br>ぜんぶつなげます</h2>
+  <p class="intro">大学受験の勉強時間のほとんどは、塾にいない時間です。だから、塾にいない6日間を「何を・どれだけ・やったか」まで見える形にしました。</p>
+  <div class="week">
+    <div class="wk"><div class="when">毎朝7時</div><div class="ico">📱</div><div class="what">「今日やること」と今週の進みぐあいがスマホに届く</div></div>
+    <div class="wk"><div class="when">毎日</div><div class="ico">✏️</div><div class="what">課題を進め、<b>チェック＋ノートの写真</b>で提出。単元テストを解く</div></div>
+    <div class="wk"><div class="when">いつでも</div><div class="ico">💬</div><div class="what">分からない問題はLINEで質問</div></div>
+    <div class="wk"><div class="when">授業の前</div><div class="ico">📋</div><div class="what">1週間の記録が<b>授業前レポート</b>に自動でまとまる</div></div>
+    <div class="wk hl"><div class="when">週1回</div><div class="ico">📝</div><div class="what">確認テスト120分（教室かオンライン）。解説と次の課題の調整</div></div>
+    <div class="wk"><div class="when">授業のあと</div><div class="ico">📄</div><div class="what"><b>解説つき答案PDF</b>・授業報告書・次の週の課題が届く</div></div>
+  </div>
+  <div class="say"><div class="av">塾長</div><div class="bub"><span class="who">このはまる塾長</span>授業の時間に「先週なにをやったか」を聞くことはありません。<b>授業の前に、先週の全記録を読み終えてから</b>教室に入ります。だから週1回の時間を、いちばん必要なところに使えます。</div></div>
+</section>
+
+<!-- ロードマップ -->
+<section id="map">
+  <span class="kicker">02　合格ロードマップ</span>
+  <h2 class="h">入試の配点から、受験までの1年を<br>参考書1冊ずつ逆算します</h2>
+  <p class="intro">入塾したら最初に作るのがこれです。志望校の入試方式・配点・ボーダーを調べ、使う参考書を「いつ始めて、週にどれだけ、何周するか」まで1枚の地図にします。下は見本（架空の生徒「ダミーさん」・名古屋大学 農学部志望の高2）。実際の生徒にも1人ずつ同じものを作っています。</p>
+  <div class="grid2">
+    <figure><div class="shot" data-cap="合格ロードマップのいちばん上。目標と、共通テスト・入試まであと何日か、今月やること。"><img src="img/rm-top.jpg" alt="合格ロードマップのトップ画面" loading="lazy"></div><figcaption>目標・試験まであと何日・<b>今月やること</b>。迷ったらここを見れば、今どの時期で何をすればいいか分かる</figcaption></figure>
+    <figure><div class="shot" data-cap="同じ大学でも推薦・前期・後期で試験の中身はちがう。配点の分析から勉強の順番を決める。"><img src="img/rm-goal.jpg" alt="めざす入試と配点の画面" loading="lazy"></div><figcaption><b>推薦・前期・後期</b>を並べて、配点から「どの教科で何点取るか」を決める</figcaption></figure>
+  </div>
+  <div class="grid2" style="margin-top:20px">
+    <figure><div class="shot" data-cap="ガントチャート。1本のバーが1冊の参考書。オレンジの線が今日。"><img src="img/rm-gantt.jpg" alt="参考書のガントチャート" loading="lazy"></div><figcaption><b>1本のバー＝1冊の参考書</b>。オレンジの線が「今日」。押すとその本の使い方・何周するか・終わったときの姿が出る</figcaption></figure>
+    <figure><div class="shot" data-cap="模試の目標の線とボーダー。結果が出るたびに点を入れ、目標を引き直す。"><img src="img/rm-moshi.jpg" alt="模試の目標と結果のグラフ" loading="lazy"></div><figcaption>模試は「判定」ではなく<b>ボーダーの線に対して今どこか</b>で見る。成績表の写真はAIが読み取り、塾長が確かめて記録</figcaption></figure>
+  </div>
+  <div class="say"><div class="av">塾長</div><div class="bub"><span class="who">このはまる塾長</span>たとえば名大農学部の前期は、共通テスト950点・二次試験1550点。<b>合計2500点のうち二次だけで6割</b>、理科2科目だけで全体の約3割です。計画は気合いではなく、この数字から作ります。そして一度作って終わりではなく、<b>模試の結果と進み方を見て毎月書き直します。</b></div></div>
+</section>
+
+<!-- 今週・今日 -->
+<section id="today">
+  <span class="kicker">03　「今週」「今日」</span>
+  <h2 class="h">1年の計画が、自動で<br>「今週の課題」「今日やること」になる</h2>
+  <p class="intro">英単語帳を「1週間で200語」で始めたなら、2週目は201〜400語。ロードマップを1週間ぶんに割り算して、毎週の課題とずれていないかを仕組みが見張ります。生徒はスマホで「今週」を開けば、やることと残りが全部分かります。</p>
+  <figure><div class="shot" data-cap="生徒の「今週」の画面（体験授業用の架空の生徒）。週の帯・進みぐあい・つぎにやること・試験まで・教科ごとの課題と写真。"><img src="img/tr-week.jpg" alt="生徒の「今週」の画面" loading="lazy"></div><figcaption>生徒の「今週」の画面（体験授業用の架空の生徒「体験 太郎」）</figcaption></figure>
+  <div class="grid3" style="margin-top:20px">
+    <div class="card"><b>📊 のこり何件・1日何件</b><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">次の授業まであと何日、のこり何件、1日あたり何件やれば終わるかを出します。日割りで縛らないので、部活で1日ずれても画面が真っ赤になりません。</p></div>
+    <div class="card"><b>📷 チェック＋写真で提出</b><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">終わったらチェックを付け、ノートの写真を送ります。<b>「チェックだけ付けて本当はやっていない」</b>を、写真で見分けます。</p></div>
+    <div class="card"><b>📅 毎日の課題は日ごとのマス</b><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">「毎日100語」「週に10題」のような課題には、日ごとのマスと合計のマスが付き、毎日と週の両方の達成が見えます。</p></div>
+  </div>
+</section>
+
+<!-- 単元テスト -->
+<section id="test">
+  <span class="kicker">04　単元テスト・つまずきカード</span>
+  <h2 class="h">「やったつもり」を、毎週数字で確かめる</h2>
+  <p class="intro">毎週の課題には、その範囲の単元テストが自動で付きます。スマホで解くとその場で採点され、記録が残ります。<b>大事なのは「やったかどうか」ではなく「できるようになったかどうか」</b>だからです。</p>
+  <div class="grid2" style="align-items:center">
+    <figure><div class="shot" data-cap="単元テストの画面。苦手な単元は80%を超えるまで残り続ける。"><img src="img/tr-quiz.jpg" alt="単元テストの画面" loading="lazy"></div><figcaption>単元テストの画面（体験授業用の架空の生徒）</figcaption></figure>
+    <div>
+      <ul class="pt">
+        <li><b>900セット以上、すべて塾のオリジナル。</b>英単語帳の範囲（語義・発音・空所補充）、英文法、古文単語、現代文キーワード、数学、地理（本物の統計データを使った資料問題）など。</li>
+        <li><b>正解が1つに決まるかを機械で確かめています。</b>数学は計算プログラムで全問を検算、英語は発音辞書で照合。そのうえで塾長が点検します。</li>
+        <li>80%に届かなかった単元は<b>「苦手な単元テスト」に残り続け</b>、解き直して80%を超えると消えます。</li>
+        <li>まちがえた問題は<b>「つまずきカード」で1日5枚ずつ</b>復習。3回続けて正解したら卒業。同じ問題をほかの塾生が何人まちがえたかも出ます。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 添削PDF（目玉） -->
+<section id="pdf">
+  <div class="wrap pdfhead">
+    <span class="kicker">05　解説つき答案PDF　実物</span>
+    <h2 class="h">これが、毎週お返しする<br>「解説つき答案」です</h2>
+    <p class="intro">丸つけした答案をスキャンして送ると、<b>答案そのものに、問題ごとの「あなたの答え → 正解 → 考え方のポイント」を書き込んだPDF</b>にしてお返しします。うしろには、まちがえた問題ごとのくわしい解説が続きます。下は、いま通っている高校生に実際に返したものです（名前と、市販の問題集の問題文はぼかしています）。</p>
+    <div class="pdfnums">
+      <div><b>52<small style="font-size:.5em">ページ</small></b><span>64問の確認テスト1回ぶんのPDF（実例）</span></div>
+      <div><b>1問ずつ</b><span>○の問題にも「どこが良かったか」の札</span></div>
+      <div><b>7つの観点</b><span>×の問題の解説（下に一覧）</span></div>
+      <div><b>前回と比較</b><span>同じつまずきが続いていないかを毎回確認</span></div>
+    </div>
+
+    <div class="pdfrow">
+      <div class="pimg"><div class="shot" data-cap="PDFの1ページ目。点数・先生から・前回からの変化（実物。名前は伏せています）"><img src="img/pdf-nk1.jpg" alt="解説つき答案PDFの1ページ目（まとめ）" loading="lazy"></div></div>
+      <div class="ptext">
+        <span class="step">1ページ目</span>
+        <h3>まず「今週のあなた」をまとめる</h3>
+        <p>点数と単元ごとの内訳のあと、「先生から」で<b>今週いちばん大事な発見</b>を書きます。この回なら「化学と生物をまたいで、<b>条件が2つある問題で1つしか確かめない</b>同じつまずきが出ている」。</p>
+        <ul class="legend">
+          <li><span class="k yel">先生から</span>教科をまたいだつまずきの正体と、今週のテーマ</li>
+          <li><span class="k blu">前回から</span>先週決めた「次にやること」ができたか。先週まちがえた問題が今週どうなったか</li>
+          <li><span class="k grn">次にやること</span>教科ごとに「何を・どこを・どれだけ」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pdfrow rev">
+      <div class="pimg"><div class="shot" data-cap="答案そのものに、問題ごとの札と赤ペン（実物。問題集の問題文はぼかしています）"><img src="img/pdf-nk6.jpg" alt="答案に書き込んだ札と赤ペン（数学）" loading="lazy"></div><p class="note-blur">※ 上のぼかしは市販問題集の問題文です（実際のPDFでは読めます）</p></div>
+      <div class="ptext">
+        <span class="step">答案のページ</span>
+        <h3>自分の答案の、その行に書き込む</h3>
+        <p>「解説を読んでも、自分の答案のどこがダメだったのか分からない」をなくすために、<b>答案のその行から線を引いて</b>書き込みます。</p>
+        <ul class="legend">
+          <li><span class="k red">× 札</span>あなたの答え → 正解 → 決め手の1行。「くわしい解説 → p.7」</li>
+          <li><span class="k grn">○ 札</span>正解でも「あと一言そえると完璧」を書く</li>
+          <li><span class="k dash">✍ 赤ペン</span>「s=t=0 の否定は s≠0 または t≠0」のように、答案のつまずいた行そのものに</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pdfrow">
+      <div class="pimg"><div class="shot" data-cap="ノートの記述答案への書き込み（実物。問題集の問題文はぼかしています）"><img src="img/pdf-af3.jpg" alt="ノートの答案への書き込み（図形）" loading="lazy"></div><p class="note-blur">※ 上部のぼかしは市販問題集の問題文です</p></div>
+      <div class="ptext">
+        <span class="step">記述の答案</span>
+        <h3>「答えは合っている」で終わらせない</h3>
+        <p>正解していても、<b>入試の記述で減点される書き方</b>は指摘します。この答案なら「なぜ合同？ → 斜辺と他の1辺が等しい直角三角形。ここが(1)のいちばん大事な根拠」。</p>
+        <p>答えだけ写した・途中が無い答案や、丸つけ漏れも見逃しません（「(2)正解。でも丸つけの印が無い」）。</p>
+      </div>
+    </div>
+
+    <div class="pdfrow rev">
+      <div class="pimg"><div class="shot" data-cap="まちがえた問題のくわしい解説ページ（実物。模範解答の部分はぼかしています）"><img src="img/pdf-af8.jpg" alt="くわしい解説のページ" loading="lazy"></div></div>
+      <div class="ptext">
+        <span class="step">解説のページ</span>
+        <h3>「なんでそう考えるの？」まで書く</h3>
+        <p>問題集の解説は「正しい解き方」しか書いていません。でも生徒が本当に知りたいのは<b>「自分の答案のどこがまずいのか」と「どうしたらその発想が出てくるのか」</b>です。</p>
+        <ul class="legend">
+          <li><span class="k red">❓</span>あなたの答案のどこがまずい？（前回と同じミスなら、そう書く）</li>
+          <li><span class="k yel">💡</span>発想・着眼点（どこに注目すれば思いつくか）</li>
+          <li><span class="k grn">📝</span>解き方・正解の根拠</li>
+          <li><span class="k blu">＋</span>別の視点・ほかの選択肢がダメな理由・関連知識・気をつけたいこと</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="color:#fff;font-size:20px">ふつうの丸つけとの違い</h3>
+    <div class="vs">
+      <div class="c bad"><h4>よくある「解きっぱなし」</h4><ul><li>赤で○×を付けて、点数を書いて終わり</li><li>解説は問題集のページを読むだけ</li><li>先週も同じところで落としていたことに誰も気づかない</li><li>「次は気をつける」で終わる</li></ul></div>
+      <div class="c good"><h4>木の葉アカデミーの解説つき答案</h4><ul><li>全問に札。答案のその行に赤ペン</li><li>「あなたの答案のどこが」「なぜそう考えるか」まで書く</li><li>毎回、前回の記録と比べて「続いているつまずき」を名指し</li><li>次の週の課題にそのまま反映</li></ul></div>
+    </div>
+    <div class="say" style="margin-top:30px"><div class="av">塾長</div><div class="bub" style="color:#1d2421"><span class="who">このはまる塾長</span>解説の下書きはAIが書きますが、<b>何をまちがえたのか・何を伝えるかを決めて、最後に読んで直すのは私です。</b>AIに任せきりにしないから、1人の塾長でも全員にこの量と質で返せます。</div></div>
+  </div>
+</section>
+
+<main class="wrap">
+
+<!-- 過去問 -->
+<section id="kakomon">
+  <span class="kicker">06　過去問の分析</span>
+  <h2 class="h">過去問は「原因 → 次にやること」まで<br>つなげてはじめて1回</h2>
+  <p class="intro">高3になると過去問の時間が増えます。記録したら、点を落とした大問ごとに<b>失点の原因</b>を選び（知識が足りない／読み違えた／解き方が分からない／2択で外した／時間が足りない／ケアレスミス／解説を読んでも分からない）、次にやることを「何を・どこを・どれだけ・いつまでに」で書きます。</p>
+  <div class="grid2" style="align-items:center">
+    <figure><div class="shot" data-cap="過去問の記録。大問ごとの出来と、出題形式ごとの正答率（体験授業用の架空の生徒）"><img src="img/tr-kakomon.jpg" alt="過去問の記録と形式別の正答率" loading="lazy"></div><figcaption>大問ごとの出来と、出題形式ごとの正答率が自動で集計されます（架空の生徒）</figcaption></figure>
+    <div>
+      <ul class="pt">
+        <li>書いている最中に仕組みがチェックします。<b>「前回も同じ形式を、同じ原因で落としていませんか？」「次にやることに、教材と量と期限が入っていますか？」</b></li>
+        <li>答案と問題の写真から、<b>これまでの全記録をふまえた分析</b>を作ります。前回の対策が今回の結果につながったか、本人の自己分析は的確か、次の1週間でどの参考書のどこをどれだけやるか。</li>
+        <li>確認テストと同じ<b>解説つき答案PDF</b>もお返しします。</li>
+        <li>受験した本番の入試も、解答・解説を作って過去問と比べて分析します（例：公募推薦の翌日に解答・解説と前年との比較を作成）。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 保護者 -->
+<section id="parent">
+  <span class="kicker">07　保護者の方へ</span>
+  <h2 class="h">「今日はやったの？」と<br>聞かなくてよくなります</h2>
+  <p class="intro">アプリのインストールは不要です。スマホのホーム画面に追加すると、本人にも保護者の方にも通知が届きます。保護者の方の朝のレポートは<b>何もしなかった日も届く</b>ので、「やっていない」ことも隠れません。下は通知の見本です（中身は作り物・形は実物と同じ）。</p>
+  <div class="phones">
+    <div>
+      <div class="phone"><div class="screen">
+        <div class="island"></div><div class="clock">7:02</div><div class="date">11月18日 水曜日</div>
+        <div class="nt"><div class="top"><img src="img/icon.png" alt="">まなびのテラス<span>いま</span></div><div class="tt">☀️ 太郎さんの朝のレポート</div><div class="bd">昨日：課題 3件・写真 4まい・単元テスト 1本（85%）
+今週の課題 58%（7/12）
+のこり：数学 2・英語 2・化学 1
+次の授業まであと3日・今日のめやす2件</div></div>
+        <div class="nt"><div class="top"><img src="img/icon.png" alt="">まなびのテラス<span>昨日 21:40</span></div><div class="tt">📝 授業報告書が届きました</div><div class="bd">11/16 の授業報告書（📄 確認テストの解説つき）</div></div>
+        <div class="nt"><div class="top"><img src="img/icon.png" alt="">まなびのテラス<span>昨日 18:10</span></div><div class="tt">💬 先生からひとこと</div><div class="bd">黄チャートの写真見ました！三角形の合同の根拠、今回はきちんと書けています👏</div></div>
+      </div></div>
+      <p class="lab">保護者の方のスマホ<small>毎朝のレポート・授業報告書・先生からのひとこと</small></p>
+    </div>
+    <div>
+      <div class="phone"><div class="screen" style="background:linear-gradient(180deg,#3a4a7a 0%,#7a6fa0 50%,#d7a98e 100%)">
+        <div class="island"></div><div class="clock">7:00</div><div class="date">11月18日 水曜日</div>
+        <div class="nt"><div class="top"><img src="img/icon.png" alt="">まなびのテラス<span>いま</span></div><div class="tt">☀️ 今日やること</div><div class="bd">昨日は課題3件と単元テスト1本。いいペースです！
+今週の課題 いま58%（7/12）
+次の授業まであと3日・今日のめやすは2件
+🃏 つまずきカード 今日の5枚</div></div>
+        <div class="nt"><div class="top"><img src="img/icon.png" alt="">まなびのテラス<span>昨日 19:00</span></div><div class="tt">🏆 今週のランキングに入りました</div><div class="bd">📷 撮りマッチョ 2位！</div></div>
+        <div class="nt"><div class="top"><img src="img/icon.png" alt="">まなびのテラス<span>昨日 19:00</span></div><div class="tt">⏰ 今日まだ取り組みがありません</div><div class="bd">5分だけでも。単語の単元テスト1本から始めよう</div></div>
+      </div></div>
+      <p class="lab">生徒本人のスマホ<small>朝は「今日やること」、夕方はひと声（1日2通まで）</small></p>
+    </div>
+  </div>
+  <div class="grid3" style="margin-top:28px">
+    <div class="card"><b>📋 授業報告書</b><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">授業のあと、その日の内容・宿題・次回の予定と、先週の取り組みのまとめが届きます。確認テストの解説PDFもここから開けます。</p></div>
+    <div class="card"><b>👪 口を出さずに見守れる</b><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">高校生になると、親子で勉強の話をするのは難しくなりがちです。数字で分かるので、言い合いにならずに済みます。きょうだいの分も1台でまとめて受け取れます。</p></div>
+    <div class="card"><b>🤝 1:1でも、ひとりじゃない</b><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">ほかの塾生のがんばり（下の名前と取り組んだことだけ。点数や学校名は出ません）が見え、いいね・ランキング・みんなで目指す週の目標があります。</p></div>
+  </div>
+</section>
+
+<!-- 1年 -->
+<section id="year">
+  <span class="kicker">08　入塾から受験まで</span>
+  <h2 class="h">入塾してから受験までの1年</h2>
+  <p class="intro">高1・高2で入った場合も、高3で入った場合も、流れは同じです。時期によって比重が変わります。</p>
+  <div class="grid2">
+    <div class="road">
+      <div class="st"><div class="tm">はじめ</div><div class="bx"><b>体験授業・面談</b><span>今の成績・志望校・使っている参考書を聞き、志望校の配点から逆算の仕方をお見せします</span></div></div>
+      <div class="st"><div class="tm">入塾〜2週目</div><div class="bx"><b>合格ロードマップを作る</b><span>志望校（推薦・前期・後期・併願）と、受験までの参考書・時期・量を1枚に</span></div></div>
+      <div class="st"><div class="tm">毎週</div><div class="bx"><b>課題 → 写真・単元テスト → 確認テスト → 解説つき答案</b><span>前の週の結果で次の週の課題を調整</span></div></div>
+      <div class="st"><div class="tm">毎月・模試のあと</div><div class="bx"><b>ロードマップを書き直す</b><span>模試の結果をボーダーの線と比べ、遅れた参考書・足りない教科を組み替える</span></div></div>
+    </div>
+    <div class="road">
+      <div class="st"><div class="tm">高1・高2</div><div class="bx"><b>学校の授業と評定を守りながら、英語・数学の土台</b><span>定期テストの範囲も計画に入れます。推薦を考えるなら評定はなおさら大事</span></div></div>
+      <div class="st"><div class="tm">高3 春〜夏</div><div class="bx"><b>二次レベルへ・共通テスト対策の開始</b><span>理科・社会を本格化。夏に志望校の過去問で現在地を確認</span></div></div>
+      <div class="st"><div class="tm">高3 秋〜冬</div><div class="bx"><b>過去問演習と分析・出願戦略</b><span>過去問は全部、原因の分析と解説つき答案に。高3は出願戦略プランを作成</span></div></div>
+      <div class="st"><div class="tm">1月〜3月</div><div class="bx"><b>共通テスト → 二次試験</b><span>共テの結果で出願先を最終決定。本番まで赤本で演習</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 塾長 -->
+<section id="about">
+  <span class="kicker">09　塾長について</span>
+  <h2 class="h">講師は塾長ひとり。<br>だから、全員の毎日を見ています</h2>
+  <div class="grid2">
+    <div class="card">
+      <p style="margin:0 0 10px">木の葉アカデミー塾長（このはまる塾長）。理系の講師で、数学・英語・物理・化学を教えています。三重県の進学校に通う高校生から「受験勉強を何から始めればいいか分からない」「参考書を買ったけど、いつまでにどこまでやればいいのか分からない」という声を聞き続けて、<b>合格までの道を全部見えるようにする仕組み</b>として「まなびのテラス」を自分で作りました。</p>
+      <p style="margin:0;color:var(--sub);font-size:15px">三重大・名古屋大・南愛名中・関関同立などの入試情報は、塾のブログでも公開しています。地元の高校から各大学に何人受かっているか、津会場で受けられる私大の日程まで、三重県の高校生に必要な情報を集めて指導に使っています。</p>
+    </div>
+    <div class="card" style="background:var(--cream)">
+      <b style="font-size:17px">AIとの付き合い方（3つの約束）</b>
+      <ul class="pt">
+        <li><b>何をどの順番でやるか、計画を決めるのは人（塾長）</b>です</li>
+        <li><b>AIが書いたものは、必ず塾長が読んで直してから</b>届けます</li>
+        <li><b>生徒の名前や成績は、塾の外に出しません</b>（このページの画面は架空の生徒、PDFは名前を伏せています）</li>
+      </ul>
+      <p style="margin:10px 0 0;font-size:14.5px;color:var(--sub)">問題づくり・答案や成績表の読み取り・記録のとりまとめをAIとプログラムが担い、浮いた時間はすべて生徒と向き合う時間に回しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 料金 -->
+<section id="price">
+  <span class="kicker">10　料金</span>
+  <h2 class="h">月謝だけで1年が完結します</h2>
+  <div class="tbl"><table>
+    <thead><tr><th style="width:24%">学年</th><th style="width:22%">月謝（税込）</th><th>ふくまれるもの</th></tr></thead>
+    <tbody>
+      <tr><td><b>高校1・2年生</b></td><td class="price">27,500<small>円</small></td><td>週1回 確認テスト120分（オンライン可）／課題の添削・解説つき答案／大学受験に向けた学習スケジュール（合格ロードマップ）作成／まなびのテラス・単元テスト・このはライブラリ／LINEで質問</td></tr>
+      <tr><td><b>高校3年生</b></td><td class="price">29,700<small>円</small></td><td>上の内容＋<b>大学受験の出願戦略プラン</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="free">
+    <div><b>0円</b><span>入会金・教室維持費</span></div>
+    <div><b>0円</b><span>夏期・冬期講習（季節講習はありません）</span></div>
+    <div><b>0円</b><span>まなびのテラスの利用料</span></div>
+  </div>
+  <p style="font-size:14px;color:var(--sub);margin:0">テキスト代は別途（目安：1教科あたり年間7,500円＋高3は赤本代）。対面でもオンラインでも同じ料金です。料金・内容は2026年11月時点のものです。</p>
+  <div class="cmp">
+    <h3 style="margin-top:22px">大学受験1年間の費用の目安</h3>
+    <div class="row"><span>木の葉アカデミー</span><div class="bar" style="width:min(100%,28%);min-width:150px;background:var(--green)">約35〜40万円</div></div>
+    <div class="row"><span>大手塾（当塾調べ）</span><div class="bar" style="width:100%;background:linear-gradient(90deg,#b0b7b3 40%,#d6dbd8)">約60〜150万円</div></div>
+  </div>
+
+  <h3 style="margin-top:44px">大学受験の合格実績</h3>
+  <p style="font-size:14px;color:var(--sub);margin:0 0 12px">大学受験の卒業生13名（延べ人数）。主な合格先：</p>
+  <div class="pass">
+    <div><b>早稲田大学</b><span>商学部・人間科学部 各1名</span></div>
+    <div><b>同志社大学</b><span>経済学部 1名</span></div>
+    <div><b>立命館大学</b><span>経済学部 2名</span></div>
+    <div><b>関西大学</b><span>経済学部 1名</span></div>
+    <div><b>愛知教育大学</b><span>教育学部 1名</span></div>
+    <div><b>名城大学</b><span>経済学部 1名</span></div>
+    <div><b>中京大学</b><span>工学部 1名</span></div>
+    <div><b>京都産業大学</b><span>法学部 1名</span></div>
+  </div>
+  <p style="font-size:12.5px;color:var(--sub)">このほか愛知学院・中部・鈴鹿医療科学大学など</p>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <span class="kicker">11　よくある質問</span>
+  <h2 class="h">よくある質問</h2>
+  <details><summary>部活が忙しくても続けられますか？</summary><p>続けられるように作っています。課題は「今日やること」まで小さく区切って届き、大会や学校行事の週は量を相談して調整します。電車の中でできる単語帳やスマホの単元テストも計画に入れます。</p></details>
+  <details><summary>数学・英語・物理・化学以外の教科はどうなりますか？</summary><p>科目指導は数学・英語・物理・化学ですが、学習スケジュールの作成は全教科に対応しています。国語・地歴公民・生物なども参考書と時期を合格ロードマップに入れ、単元テストのある教科（古文・現代文・地理など）は毎週の課題に付けます。</p></details>
+  <details><summary>オンラインでも受けられますか？</summary><p>受けられます。課題・単元テスト・答案の添削はすべて「まなびのテラス」で行うので、三重県のどこに住んでいても同じように受けられます。料金は対面と同じです。</p></details>
+  <details><summary>高1・高2からでも早くないですか？</summary><p>早すぎることはありません。進学校のハイペースな授業についていきながら、定期テストで評定を取り、同時に受験の土台を作ることが必要です。高1・高2のうちに英語と数学の土台ができていると、高3の1年がまったくちがいます。</p></details>
+  <details><summary>今使っている参考書や、学校の課題はどうなりますか？</summary><p>今の参考書と学校の課題を聞いたうえでロードマップを作ります。使える本はそのまま使い、足りないところだけ足します。学校の定期テストの範囲も計画に入れます。</p></details>
+  <details><summary>アプリのインストールは必要ですか？</summary><p>不要です。スマホ・タブレット・パソコンのブラウザで使えます。ホーム画面に追加するとアプリのように開け、通知も受け取れます（iPhoneは iOS 16.4 以降）。</p></details>
+  <details><summary>AIに任せきりになりませんか？</summary><p>なりません。指導するのはいつも塾長です。AIが作った問題は検算と点検を通し、AIの分析や解説は塾長が読んで直してから届けます。</p></details>
+</section>
+
+<div class="cta">
+  <h2>まずは、あなたの志望校で<br>逆算してみましょう</h2>
+  <p>体験授業では、志望校に合わせた合格ロードマップの作り方と、実際のまなびのテラスの画面をお見せします。<br>今の成績は関係ありません。「どこでも受かるとしたら、どこへ行きたい？」から始めます。</p>
+  <div class="steps">
+    <div><b>STEP 1</b>LINEで友だち登録</div>
+    <div><b>STEP 2</b>体験授業アンケートに回答</div>
+    <div><b>STEP 3</b>体験授業・ご相談（無料・オンライン可）</div>
+  </div>
+  <a class="btn" href="https://lin.ee/uwX00L5" target="_blank" rel="noopener">💬 LINEで無料体験・相談を申し込む</a>
+</div>
+
+<footer>
+  ※アプリの画面写真は、まなびのテラスの実際の画面に架空の生徒のデータを入れたものです。解説つき答案PDFは在籍生に実際に返したもので、名前を伏せ、市販の問題集・模範解答の部分はぼかしています。入試の数字は河合塾 Kei-Net の2027年度入試の情報です。料金・内容は2026年11月時点のものです。<br>
+  このページは、入塾をご検討中の方にだけお送りしています（検索には表示されません）。<br>
+  © 木の葉アカデミー
+</footer>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="拡大表示"><button class="x" aria-label="閉じる">×</button><img alt=""><p class="cap"></p></div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap');
+  document.querySelectorAll('.shot').forEach(function(s){
+    s.addEventListener('click',function(){var i=s.querySelector('img');im.src=i.src;im.alt=i.alt;cap.textContent=s.getAttribute('data-cap')||'';lb.classList.add('on');document.body.style.overflow='hidden';});
+  });
+  function close(){lb.classList.remove('on');document.body.style.overflow='';}
+  lb.addEventListener('click',function(e){if(e.target!==im)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>
